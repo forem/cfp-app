@@ -1,4 +1,6 @@
 class Track < ApplicationRecord
+  # Referred to as 'Theme' in the UI
+
   NO_TRACK = 'General'
 
   belongs_to :event

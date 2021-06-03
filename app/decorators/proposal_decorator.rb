@@ -52,7 +52,7 @@ class ProposalDecorator < ApplicationDecorator
   end
 
   def no_track_name_for_speakers
-    "#{Track::NO_TRACK} - No Suggested Track"
+    "#{Track::NO_TRACK} - No Suggested Theme"
   end
 
   def track_name_for_speakers

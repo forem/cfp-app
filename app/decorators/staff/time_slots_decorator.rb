@@ -8,7 +8,7 @@ class Staff::TimeSlotsDecorator < Draper::CollectionDecorator
         end_time: 'End Time',
         room_name: 'Room Name',
         display_title: 'Title',
-        display_track_name: 'Track Name',
+        display_track_name: 'Theme Name',
         session_format_name: 'Session Format',
         display_description: 'Description',
         display_presenter: 'Presenter'

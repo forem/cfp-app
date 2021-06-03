@@ -78,7 +78,7 @@ feature "Event Config" do
 
     it "can add a new track" do
       visit event_staff_config_path(event)
-      click_on "Add Track"
+      click_on "Add Theme"
 
       fill_in "Name", with: "Best Track"
       click_button "Save"
@@ -90,7 +90,7 @@ feature "Event Config" do
 
     it "can't add a track with a description longer than 250 characters" do
       visit event_staff_config_path(event)
-      find_link("Add Track").click
+      find_link("Add Theme").click
 
       find("#track_name")
       fill_in "Name", with: "Best Session"

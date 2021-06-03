@@ -67,7 +67,7 @@
                     %td.missing= link_to "No Public Session Formats", event_staff_config_path
                 %tr
                   %td.text-primary
-                    %strong Tracks:
+                    %strong Theme:
                   - if event.tracks.present?
                     %td.set= link_to event.tracks.count, event_staff_config_path
                   - else

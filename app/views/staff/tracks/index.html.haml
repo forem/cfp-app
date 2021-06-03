@@ -2,8 +2,8 @@
   .col-sm-12
     .page-header.clearfix
       .btn-nav.pull-right
-        = link_to 'New Event Track', new_event_staff_track_path(@event), class: "btn btn-primary"
-      %h1 Event Tracks
+        = link_to 'New Event Theme', new_event_staff_track_path(@event), class: "btn btn-primary"
+      %h1 Event Themes
 
 .row
   .col-sm-12
@@ -26,4 +26,4 @@
               %td.action-destroy
                 = link_to 'Destroy', event_staff_track_path(@event, t), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger"
     -else
-      %p No tracks defined for this event.
+      %p No themes defined for this event.
