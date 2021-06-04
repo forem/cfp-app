@@ -80,4 +80,21 @@ $(function() {
       }
     });
   }
+
+  // Show/hide suggested theme input
+  $('select[id="theme_select"]').change(function() {
+    if($(this).val() === ""){
+      $('div.proposal_suggested_theme').show(200)
+    } else {
+      $('div.proposal_suggested_theme').hide(200)
+    };
+  });
 });
+
+$(document).ready(function () {
+  if($('select[id="theme_select"]').val() === ""){
+    $('div.proposal_suggested_theme').show()
+  } else {
+    $('div.proposal_suggested_theme').hide()
+  };
+})

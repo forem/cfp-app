@@ -16,8 +16,10 @@
 
   - if event.multiple_tracks? && !proposal.has_reviewer_activity?
     - opts_tracks = event.tracks.sort_by_name.map {|t| [t.name, t.id]}
-    = f.association :track, collection: opts_tracks, label: "Theme", include_blank: proposal.no_track_name_for_speakers, input_html: {class: 'dropdown'},
+    = f.association :track, collection: opts_tracks, label: "Theme", include_blank: proposal.no_track_name_for_speakers, input_html: {class: 'dropdown', id: 'theme_select'},
       hint: "Optional: suggest a specific theme to be considered for.", popover_icon: { content: track_tooltip }
+
+    = proposal.suggested_theme_input(f)
   - else
     .form-group
       = f.label :track, 'Theme'

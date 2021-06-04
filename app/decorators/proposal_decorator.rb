@@ -52,7 +52,7 @@ class ProposalDecorator < ApplicationDecorator
   end
 
   def no_track_name_for_speakers
-    "#{Track::NO_TRACK} - No Suggested Theme"
+    "#{Track::NO_TRACK} - Describe Below"
   end
 
   def track_name_for_speakers
@@ -159,6 +159,13 @@ class ProposalDecorator < ApplicationDecorator
     autofocus: true,
     maxlength: :lookup, input_html: { class: 'watched js-maxlength-alert' },
     hint: "Publicly viewable title. Ideally catchy, interesting, essence of the talk. Limited to 60 characters."
+  end
+
+  def suggested_theme_input(form)
+    form.input :suggested_theme,
+    autofocus: true,
+    # maxlength: :lookup, input_html: { class: 'watched js-maxlength-alert' },
+    hint: "Suggest a theme for this talk if none of the other themes fit."
   end
 
   def speaker_input(form)

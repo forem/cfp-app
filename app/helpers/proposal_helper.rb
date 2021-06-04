@@ -51,4 +51,8 @@ module ProposalHelper
   def notes_tooltip
     "Please note any scheduling conflicts, or any additional information an organizer may need to schedule your talk."
   end
+  
+  def theme_with_suggestion(proposal)
+      "#{proposal.track_name}#{proposal.track_id.nil? ? ' - ' + proposal.suggested_theme : ''}"
+  end
 end

@@ -68,7 +68,7 @@
                 #current-track
                   .info-item-heading Theme
                   #track-name.pull-left
-                    #{proposal.track_name}
+                    = theme_with_suggestion(proposal)
                   - if track_and_format_edit
                     #edit-track-icon.fa.fa-pencil
                 #edit-track-wrapper
