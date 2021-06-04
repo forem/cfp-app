@@ -21,7 +21,7 @@
 
       - if program_tracks.any?
         %li.static
-          %span.title By Track:
+          %span.title By Theme:
           %form.track-select{data: {event: current_event.slug}}
             %select{id: 'track-select', name: 'track'}
               %option{value: 'all', selected: sticky_selected_track.blank? } All

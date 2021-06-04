@@ -27,8 +27,8 @@
       .widget.widget-table
         .widget-header
           %i.fa.fa-exchange
-          %h3 Tracks
-          = link_to "Add Track", new_event_staff_track_path(event), remote: true,
+          %h3 Themes
+          = link_to "Add Theme", new_event_staff_track_path(event), remote: true,
             class: "btn btn-success btn-sm pull-right" unless !current_user.organizer_for_event?(event)
         .widget-content
           %table.table.table-striped.table-bordered#tracks

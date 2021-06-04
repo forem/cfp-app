@@ -14,8 +14,8 @@
             %b Format:
             = proposal.session_format_name
         .other-proposal-track
-          %b Track:
-          = proposal.track_name
+          %b Theme:
+          = theme_with_suggestion(proposal)
         .other-proposal-review-tags
           = proposal.review_tags_labels
   -else

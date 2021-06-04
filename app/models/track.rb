@@ -1,5 +1,7 @@
 class Track < ApplicationRecord
-  NO_TRACK = 'General'
+  # Referred to as 'Theme' in the UI
+
+  NO_TRACK = 'Other'
 
   belongs_to :event
   has_many :program_sessions

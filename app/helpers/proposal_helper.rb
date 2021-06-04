@@ -24,7 +24,7 @@ module ProposalHelper
   def track_tooltip
     content_tag(:div) do
       concat(content_tag(:p) do
-        content_tag(:strong, "Session Track Guide")
+        content_tag(:strong, "Session Theme Guide")
       end)
       event.tracks.each do |track|
         concat(content_tag(:p, "#{track.name} - #{track.description}"))
@@ -50,5 +50,15 @@ module ProposalHelper
 
   def notes_tooltip
     "Please note any scheduling conflicts, or any additional information an organizer may need to schedule your talk."
+  end
+  
+  def theme_with_suggestion(proposal)
+      capture do
+        concat proposal.track_name
+        if !proposal&.track_id&.nil? && proposal&.suggested_theme
+          concat ' - '
+          concat proposal.suggested_theme
+        end
+      end
   end
 end

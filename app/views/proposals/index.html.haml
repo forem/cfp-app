@@ -47,7 +47,7 @@
 
                         .proposal-meta.proposal-description
                           .proposal-meta-item
-                            %strong Track:
+                            %strong Theme:
                             = invitation.proposal.track_name
                           .proposal-meta-item
                             %strong #{ 'Speaker'.pluralize(invitation.proposal.speakers.count) }:
@@ -79,8 +79,8 @@
                           %span #{proposal.session_format_name}
 
                         .proposal-meta-item
-                          %strong Track:
-                          %span #{proposal.track_name}
+                          %strong Theme:
+                          %span #{theme_with_suggestion(proposal)}
                       .proposal-meta.margin-top
                         %strong Updated:
                         %span #{proposal.updated_in_words}
