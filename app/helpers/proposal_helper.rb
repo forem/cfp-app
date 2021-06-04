@@ -53,6 +53,12 @@ module ProposalHelper
   end
   
   def theme_with_suggestion(proposal)
-      "#{proposal.track_name}#{proposal.track_id.nil? ? ' - ' + proposal.suggested_theme : ''}"
+      capture do
+        concat proposal.track_name
+        if proposal&.track_id&.zero? && proposal&.suggested_theme
+          concat ' - '
+          concat proposal.suggested_theme
+        end
+      end
   end
 end
