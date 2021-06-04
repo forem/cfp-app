@@ -55,7 +55,7 @@ module ProposalHelper
   def theme_with_suggestion(proposal)
       capture do
         concat proposal.track_name
-        if proposal&.track_id&.zero? && proposal&.suggested_theme
+        if !proposal&.track_id&.nil? && proposal&.suggested_theme
           concat ' - '
           concat proposal.suggested_theme
         end
