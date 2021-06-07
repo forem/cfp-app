@@ -18,7 +18,7 @@
           %th Event
           %th Title
           %th Status
-          %th Abstract
+          %th Talk Outline
       %tbody
         - user.proposals.to_a.group_by(&:event).each do |event, talks|
           - talks.each do |proposal|

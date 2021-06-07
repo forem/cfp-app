@@ -103,7 +103,7 @@ class TimeSlotModal extends Component {
           <p>{tracks.find(track => track.id === sessionSelected.track_id || 'No track').name}</p>
         </label>
         <label>
-          Abstract:
+          Talk Outline:
           <p>{sessionSelected.abstract}</p>
         </label>
         <label>

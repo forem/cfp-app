@@ -33,7 +33,7 @@ module ProposalHelper
   end
 
   def abstract_tooltip
-    "A concise, engaging description for the public program. Limited to 600 characters."
+    "This is the place to outline the specifics of your talk: what topics will you cover, if you\'ll have any special elements (i.e., code samples, video samples, etc.), what you\'d like the audience to take away from your talk, and how you\'d like them to feel afterwards."
   end
 
   def details_tooltip
