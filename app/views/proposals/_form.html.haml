@@ -44,8 +44,8 @@
   = f.input :details, input_html: { class: 'watched', rows: 5 }, label: 'Problem',
     hint: 'What problem is your talk solving?'#, popover_icon: { content: details_tooltip }
 
-  = f.input :pitch, input_html: { class: 'watched', rows: 5 },
-    hint: 'Explain why this talk should be considered and what makes you qualified to speak on the topic.'#, popover_icon: { content: pitch_tooltip }
+  = f.input :pitch, input_html: { class: 'watched', rows: 5 }, label: 'Fit',
+    hint: 'Explain why you’re the best person to give this talk. This is less about expertise (which is not a requirement), but more about the relationship between the talk and the speaker, and finding a good fit. Feel free to include your passion, past experience, previous roles, etc.'#, popover_icon: { content: pitch_tooltip }
 
 - if event.custom_fields.any?
   - event.custom_fields.each do |custom_field|
