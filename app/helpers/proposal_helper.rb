@@ -37,7 +37,7 @@ module ProposalHelper
   end
 
   def details_tooltip
-    "Include any pertinent details such as outlines, outcomes or intended audience."
+    "What problem is your talk solving?"
   end
 
   def pitch_tooltip
