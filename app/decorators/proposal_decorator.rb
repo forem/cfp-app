@@ -172,10 +172,10 @@ class ProposalDecorator < ApplicationDecorator
     form.input :speaker
   end
 
-  def abstract_input(form, tooltip = "Proposal Abstract")
-    form.input :abstract,
+  def abstract_input(form, tooltip = "Talk Outline")
+    form.input :abstract, label: "Talk Outline",
       maxlength: 1005, input_html: { class: 'watched js-maxlength-alert', rows: 5 },
-      hint: 'A concise, engaging description for the public program. Limited to 600 characters.'#, popover_icon: { content: tooltip }
+      hint: 'This is the place to outline the specifics of your talk: what topics will you cover, if you\'ll have any special elements (i.e., code samples, video samples, etc.), what you\'d like the audience to take away from your talk, and how you\'d like them to feel afterwards.'#, popover_icon: { content: tooltip }
   end
 
   def standalone_track_select(tooltip)
