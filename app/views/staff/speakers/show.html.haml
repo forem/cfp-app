@@ -39,6 +39,12 @@
         %h3.control-label Bio
         %p= @speaker.bio
       .program-session-item
+        %h3.control-label DEV username
+        %p= @speaker.dev_username
+      .program-session-item
+        %h3.control-label CodeNewbie username
+        %p= @speaker.codenewbie_username
+      .program-session-item
         %h3.control-label First time speaker?
         %p= boolean_to_words(@speaker.first_time_speaker)
       .program-session-item
