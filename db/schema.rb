@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_04_141923) do
+ActiveRecord::Schema.define(version: 2021_06_08_211809) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -164,6 +164,8 @@ ActiveRecord::Schema.define(version: 2021_06_04_141923) do
     t.string "ethnicity"
     t.boolean "first_time_speaker"
     t.string "pronouns"
+    t.string "dev_username"
+    t.string "codenewbie_username"
     t.index ["event_id"], name: "index_speakers_on_event_id"
     t.index ["program_session_id"], name: "index_speakers_on_program_session_id"
     t.index ["proposal_id"], name: "index_speakers_on_proposal_id"

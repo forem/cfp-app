@@ -10,6 +10,12 @@
 
   = simple_format speaker.bio
 
+  %strong DEV username:
+  = simple_format speaker.dev_username
+
+  %strong CodeNewbie username:
+  = simple_format speaker.codenewbie_username
+
   %strong First time speaker:
   = simple_format boolean_to_words(speaker.first_time_speaker)
 
