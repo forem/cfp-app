@@ -24,7 +24,7 @@ module ProposalHelper
   def track_tooltip
     content_tag(:div) do
       concat(content_tag(:p) do
-        content_tag(:strong, "Session Theme Guide")
+        content_tag(:strong, "Track Theme Guide")
       end)
       event.tracks.each do |track|
         concat(content_tag(:p, "#{track.name} - #{track.description}"))

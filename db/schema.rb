@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_04_141923) do
+ActiveRecord::Schema.define(version: 2021_06_09_145622) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -109,6 +109,11 @@ ActiveRecord::Schema.define(version: 2021_06_04_141923) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text "suggested_theme"
+    t.text "research"
+    t.string "location_and_time_zone"
+    t.text "equipment_requirements"
+    t.text "accessibility_requirements"
+    t.boolean "video_voice_recording_permission"
     t.index ["event_id"], name: "index_proposals_on_event_id"
     t.index ["session_format_id"], name: "index_proposals_on_session_format_id"
     t.index ["track_id"], name: "index_proposals_on_track_id"
@@ -164,6 +169,8 @@ ActiveRecord::Schema.define(version: 2021_06_04_141923) do
     t.string "ethnicity"
     t.boolean "first_time_speaker"
     t.string "pronouns"
+    t.string "dev_username"
+    t.string "codenewbie_username"
     t.index ["event_id"], name: "index_speakers_on_event_id"
     t.index ["program_session_id"], name: "index_speakers_on_program_session_id"
     t.index ["proposal_id"], name: "index_speakers_on_proposal_id"

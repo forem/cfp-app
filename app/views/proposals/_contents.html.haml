@@ -15,6 +15,26 @@
   .markdown{ data: { 'field-id' => 'proposal_pitch' } }
     =proposal.pitch_markdown
 
+.proposal-section
+  %h3.control-label Research
+  .markdown{ data: { 'field-id' => 'research' } }
+    = markdown(proposal.research) 
+
+.proposal-section
+  %h3.control-label Location and Time zone
+  .markdown{ data: { 'field-id' => 'location_and_time_zone' } }
+    = proposal.location_and_time_zone 
+
+.proposal-section
+  %h3.control-label Equipment Requirements
+  .markdown{ data: { 'field-id' => 'equipment_requirements' } }
+    = markdown(proposal.equipment_requirements) 
+
+.proposal-section
+  %h3.control-label Accessibility Requirements
+  .markdown{ data: { 'field-id' => 'accessibility_requirements' } }
+    = markdown(proposal.accessibility_requirements)  
+
 - if proposal.custom_fields.any?
   - proposal.proposal_data[:custom_fields].select do |key,value|
     .proposal-section
