@@ -11,6 +11,8 @@ FactoryBot.define do
     user
     event { Event.first || FactoryBot.create(:event) }
     bio { "Speaker bio" }
+    dev_username { Faker::Internet.username }
+    codenewbie_username { Faker::Internet.username }
 
     trait :with_name do
       speaker_name
