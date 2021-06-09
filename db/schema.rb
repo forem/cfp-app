@@ -109,11 +109,11 @@ ActiveRecord::Schema.define(version: 2021_06_09_145622) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text "suggested_theme"
-    t.text "research"
-    t.string "location_and_time_zone"
-    t.text "equipment_requirements"
-    t.text "accessibility_requirements"
-    t.boolean "video_voice_recording_permission"
+    t.text "research", null: false
+    t.string "location_and_time_zone", null: false
+    t.text "equipment_requirements", null: false
+    t.text "accessibility_requirements", null: false
+    t.boolean "video_voice_recording_permission", default: false, null: false
     t.index ["event_id"], name: "index_proposals_on_event_id"
     t.index ["session_format_id"], name: "index_proposals_on_session_format_id"
     t.index ["track_id"], name: "index_proposals_on_track_id"
