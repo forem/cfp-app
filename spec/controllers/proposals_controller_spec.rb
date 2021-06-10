@@ -44,6 +44,11 @@ describe ProposalsController, type: :controller do
           details: proposal.details,
           pitch: proposal.pitch,
           session_format_id: proposal.session_format.id,
+          research: proposal.research,
+          location_and_time_zone: proposal.location_and_time_zone,
+          equipment_requirements: proposal.equipment_requirements,
+          accessibility_requirements: proposal.accessibility_requirements,
+          video_voice_recording_permission: proposal.video_voice_recording_permission,
           speakers_attributes: {
             '0' => {
               bio: 'my bio',

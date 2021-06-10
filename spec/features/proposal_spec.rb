@@ -15,6 +15,11 @@ feature "Proposals" do
     fill_in 'proposal_speakers_attributes_0_bio', with: "I am awesome."
     fill_in 'Fit', with: "You live but once; you might as well be amusing. - Coco Chanel"
     fill_in 'Problem', with: "Plans are nothing; planning is everything. - Dwight D. Eisenhower"
+    fill_in 'Research', with: "Some in depth research"
+    select '(GMT-06:00) Central Time (US & Canada)', from: "Location and time zone"
+    fill_in 'Equipment requirements', with: "Lights, camera, action"
+    fill_in 'Accessibility requirements', with: "None needed"
+    check 'Video and Voice Recording Permission'
     select 'Only format', from: 'Session format'
     click_button 'Submit'
   end

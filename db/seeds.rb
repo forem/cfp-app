@@ -174,6 +174,11 @@ If your talk is about seed data in Rails apps, we want to hear about it!
     p.abstract = Faker::Hipster.sentence
     p.details = Faker::Hacker.say_something_smart
     p.pitch = Faker::Superhero.power
+    p.research = Faker::Lorem.sentence
+    p.location_and_time_zone = Time.zone_default
+    p.equipment_requirements = Faker::Lorem.sentence
+    p.accessibility_requirements = Faker::Lorem.sentence
+    p.video_voice_recording_permission = true
   end
 
   submitted_proposal_2 = seed_event.proposals.where(
@@ -186,6 +191,11 @@ If your talk is about seed data in Rails apps, we want to hear about it!
     p.abstract = Faker::Hipster.sentence
     p.details = Faker::Hacker.say_something_smart
     p.pitch = Faker::Superhero.power
+    p.research = Faker::Lorem.sentence
+    p.location_and_time_zone = Time.zone_default
+    p.equipment_requirements = Faker::Lorem.sentence
+    p.accessibility_requirements = Faker::Lorem.sentence
+    p.video_voice_recording_permission = true
   end
 
   soft_waitlisted_proposal = seed_event.proposals.where(
@@ -199,6 +209,11 @@ If your talk is about seed data in Rails apps, we want to hear about it!
     p.abstract = Faker::Hipster.sentence
     p.details = Faker::Hacker.say_something_smart
     p.pitch = Faker::Superhero.power
+    p.research = Faker::Lorem.sentence
+    p.location_and_time_zone = Time.zone_default
+    p.equipment_requirements = Faker::Lorem.sentence
+    p.accessibility_requirements = Faker::Lorem.sentence
+    p.video_voice_recording_permission = true
   end
 
   soft_accepted_proposal = seed_event.proposals.where(
@@ -212,6 +227,11 @@ If your talk is about seed data in Rails apps, we want to hear about it!
     p.abstract = Faker::Hipster.sentence
     p.details = Faker::Hacker.say_something_smart
     p.pitch = Faker::Superhero.power
+    p.research = Faker::Lorem.sentence
+    p.location_and_time_zone = Time.zone_default
+    p.equipment_requirements = Faker::Lorem.sentence
+    p.accessibility_requirements = Faker::Lorem.sentence
+    p.video_voice_recording_permission = true
   end
 
   soft_rejected_proposal = seed_event.proposals.where(
@@ -225,6 +245,11 @@ If your talk is about seed data in Rails apps, we want to hear about it!
     p.abstract = Faker::Hipster.sentence
     p.details = Faker::Hacker.say_something_smart
     p.pitch = Faker::Superhero.power
+    p.research = Faker::Lorem.sentence
+    p.location_and_time_zone = Time.zone_default
+    p.equipment_requirements = Faker::Lorem.sentence
+    p.accessibility_requirements = Faker::Lorem.sentence
+    p.video_voice_recording_permission = true
   end
 
   withdrawn_proposal = seed_event.proposals.where(
@@ -238,6 +263,11 @@ If your talk is about seed data in Rails apps, we want to hear about it!
     p.abstract = Faker::Hipster.sentence
     p.details = Faker::Hacker.say_something_smart
     p.pitch = Faker::Superhero.power
+    p.research = Faker::Lorem.sentence
+    p.location_and_time_zone = Time.zone_default
+    p.equipment_requirements = Faker::Lorem.sentence
+    p.accessibility_requirements = Faker::Lorem.sentence
+    p.video_voice_recording_permission = true
   end
 
   # Speakers
@@ -319,6 +349,11 @@ If your talk is about seed data in Rails apps, we want to hear about it!
     p.abstract = Faker::Hipster.sentence
     p.details = Faker::Hacker.say_something_smart
     p.pitch = Faker::Superhero.power
+    p.research = Faker::Lorem.sentence
+    p.location_and_time_zone = Time.zone_default
+    p.equipment_requirements = Faker::Lorem.sentence
+    p.accessibility_requirements = Faker::Lorem.sentence
+    p.video_voice_recording_permission = true
     p.confirmed_at = Time.current
   end
 
@@ -333,6 +368,11 @@ If your talk is about seed data in Rails apps, we want to hear about it!
     p.abstract = Faker::Hipster.sentence
     p.details = Faker::Hacker.say_something_smart
     p.pitch = Faker::Superhero.power
+    p.research = Faker::Lorem.sentence
+    p.location_and_time_zone = Time.zone_default
+    p.equipment_requirements = Faker::Lorem.sentence
+    p.accessibility_requirements = Faker::Lorem.sentence
+    p.video_voice_recording_permission = true
     p.confirmed_at = Time.current
   end
 
@@ -503,6 +543,11 @@ If you are on the cutting edge with savvy scheduling skills, we want you!
         abstract: Faker::Hipster.sentence,
         details: Faker::Hacker.say_something_smart,
         pitch: Faker::Superhero.power,
+        research: Faker::Lorem.sentence,
+        location_and_time_zone: Time.zone_default,
+        equipment_requirements: Faker::Lorem.sentence,
+        accessibility_requirements: Faker::Lorem.sentence,
+        video_voice_recording_permission: true,
         session_format: schedule_conf_formats[(i % 4)],
         track: schedule_conf_tracks[(i % 3)],
         confirmed_at: Time.current
