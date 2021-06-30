@@ -19,6 +19,18 @@ class CommentsController < ApplicationController
     redirect_back fallback_location: event_proposal_path(@proposal.event, uuid: @proposal)
   end
 
+  def destroy
+    @comment = Comment.find(params.require(:id))
+
+    authorize @comment, :mark_as_deleted!, policy_class: CommentPolicy
+
+    unless @comment.mark_as_deleted!
+      flash[:danger] = "Couldn't delete comment: #{@comment.errors.full_messages.to_sentence}"
+    end
+
+    redirect_back fallback_location: event_proposal_path(@comment.proposal.event, uuid: @comment.proposal)
+  end
+
   private
   def comment_type
     @comment_type ||= valid_comment_types.find{|t| t==params[:type]} || 'PublicComment'
@@ -29,6 +41,6 @@ class CommentsController < ApplicationController
   end
 
   def comment_params
-    params.require(comment_type.underscore).permit(:body, :proposal_id)
+    params.require(comment_type.underscore).permit(:body, :proposal_id, :comment_id)
   end
 end

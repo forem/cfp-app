@@ -168,3 +168,12 @@
     background: lighten($brand-info, 45%);
   }
 }
+
+.deleted_comment {
+  background-color:lightblue;
+}
+
+.trash-wrapper{
+  font-size: 14px;
+  padding-left: 10px;
+}

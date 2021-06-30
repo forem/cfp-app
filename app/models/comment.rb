@@ -10,6 +10,10 @@ class Comment < ApplicationRecord
     type == "PublicComment"
   end
 
+  def mark_as_deleted!
+    update_attribute(:deleted, true)
+  end
+
 end
 
 # == Schema Information

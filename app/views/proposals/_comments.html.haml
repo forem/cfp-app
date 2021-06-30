@@ -7,8 +7,18 @@
             %p.name
               = commenter_name(comment)
             %span.time #{comment.created_at.to_s(:day_at_time)}
+
+            - if show_destroy_comment?(comment)
+              %span.trash-wrapper
+                = link_to(comment_path(comment), :method=>:delete) do
+                  %i.fa.fa-trash
+
         .text
-          =markdown(comment.body)
+          - if comment.deleted?
+            %span.deleted_comment Comment was deleted
+          - else
+            =markdown(comment.body)
+
 
 = form_for comments.new do |f|
   = f.hidden_field :proposal_id
