@@ -114,6 +114,8 @@ Rails.application.routes.draw do
   resource :public_comments, only: [:create], controller: :comments, type: 'PublicComment'
   resource :internal_comments, only: [:create], controller: :comments, type: 'InternalComment'
 
+  resources :comments, only: [:destroy]
+
   resources :speakers, only: [:destroy]
   resources :events, only: [:index]
 

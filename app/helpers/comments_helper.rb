@@ -20,4 +20,9 @@ module CommentsHelper
   def internal?(comment)
     comment.type == "InternalComment"
   end
+
+  def show_destroy_comment?(comment)
+    comment.user == current_user && !comment.deleted?
+  end
+
 end
