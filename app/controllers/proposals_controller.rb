@@ -142,7 +142,7 @@ class ProposalsController < ApplicationController
 
   def proposal_params
     params.require(:proposal).permit(:title, {tags: []}, :session_format_id, :track_id, :abstract, :details, :pitch, :suggested_theme, 
-                                     :research, :location_and_time_zone, :equipment_requirements, :accessibility_requirements, :video_voice_recording_permission, 
+                                     :location_and_time_zone, :equipment_requirements, :accessibility_requirements, :video_voice_recording_permission, 
                                      custom_fields: @event.custom_fields,
                                      comments_attributes: [:body, :proposal_id, :user_id],
                                      speakers_attributes: [:bio, :id, :age_range, :pronouns, :ethnicity, :first_time_speaker, :dev_username, :codenewbie_username])

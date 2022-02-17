@@ -27,7 +27,7 @@ class Proposal < ApplicationRecord
   validates_inclusion_of :state, in: FINAL_STATES, allow_nil: false, message: "'%{value}' not a confirmable state.",
                                  if: :confirmed_at_changed?
 
-  validates :research, :location_and_time_zone, :equipment_requirements, :accessibility_requirements, presence: true
+  validates :location_and_time_zone, :equipment_requirements, :accessibility_requirements, presence: true
   validates :video_voice_recording_permission, acceptance: true
 
   serialize :last_change
