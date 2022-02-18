@@ -20,6 +20,12 @@ class Proposal < ApplicationRecord
   belongs_to :session_format
   belongs_to :track
 
+  TALK_TYPES = [
+    ANECDOTAL = 'Anecdotal/Descriptive',
+    RESEARCH = 'Research-Based/Technical',
+    HYBRID = 'Hybrid'
+  ].freeze
+
   validates :title, :abstract, :session_format, presence: true
   validate :abstract_length
   validates :title, length: { maximum: 60 }

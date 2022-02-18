@@ -44,7 +44,7 @@ describe ProposalsController, type: :controller do
           details: proposal.details,
           pitch: proposal.pitch,
           session_format_id: proposal.session_format.id,
-          # research: proposal.research,
+          talk_type: proposal.talk_type,
           location_and_time_zone: proposal.location_and_time_zone,
           equipment_requirements: proposal.equipment_requirements,
           accessibility_requirements: proposal.accessibility_requirements,

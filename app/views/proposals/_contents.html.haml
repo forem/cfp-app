@@ -15,12 +15,10 @@
   .markdown{ data: { 'field-id' => 'proposal_pitch' } }
     =proposal.pitch_markdown
 
-
-/
-  .proposal-section
-    %h3.control-label Talk Type
-    .markdown{ data: { 'field-id' => 'talk_type' } }
-      = markdown(proposal.talk_type) 
+.proposal-section
+  %h3.control-label Talk Type
+  .markdown{ data: { 'field-id' => 'talk_type' } }
+    = markdown(proposal.talk_type) 
 
 .proposal-section
   %h3.control-label Location and Time zone
