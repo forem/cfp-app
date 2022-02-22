@@ -47,8 +47,8 @@
   = f.input :pitch, input_html: { class: 'watched', rows: 5 }, label: 'Fit',
     hint: 'Explain why you’re the best person to give this talk. This is less about expertise (which is not a requirement), but more about the relationship between the talk and the speaker, and finding a good fit. Feel free to include your passion, past experience, previous roles, etc.'#, popover_icon: { content: pitch_tooltip }
 
-  = f.input :research, input_html: { class: 'watched', rows: 5 }, required: true,
-    hint: "What resources and research do you plan to include in your talk, if any? (i.e., interviews, reports, primary sources, academic journals, etc.)"
+  = f.input :talk_type, collection: Proposal::TALK_TYPES, required: true,
+    hint: "Please let us know which category you most see your proposed talk fitting in. Note: we don't favor one type of talk over others, but hope to have a good mix"
 
   = f.input :location_and_time_zone, required: true
 
@@ -60,7 +60,7 @@
 
   = f.input :video_voice_recording_permission, required: true, label: 'Video and Voice Recording Permission',
     as: :boolean, boolean_style: :inline, 
-    hint: "Each CodeLand 2021 talk will be submitted as a 15-minute pre-recorded video. We may also invite you to participate in a moderated live panel over video conference. Please check here to confirm that, if accepted, you are committing to sending us a pre-recorded 15-minute video of your talk and to possibly participating in a live panel over video conference."
+    hint: "Each CodeLand talk will be submitted as a 15-minute pre-recorded video. We may also invite you to participate in a moderated live panel over video conference. Please check here to confirm that, if accepted, you are committing to sending us a pre-recorded 15-minute video of your talk and to possibly participating in a live panel over video conference."
 
 - if event.custom_fields.any?
   - event.custom_fields.each do |custom_field|

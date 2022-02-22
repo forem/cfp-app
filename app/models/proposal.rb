@@ -20,6 +20,12 @@ class Proposal < ApplicationRecord
   belongs_to :session_format
   belongs_to :track
 
+  TALK_TYPES = [
+    ANECDOTAL = 'Anecdotal/Descriptive',
+    RESEARCH = 'Research-Based/Technical',
+    HYBRID = 'Hybrid'
+  ].freeze
+
   validates :title, :abstract, :session_format, presence: true
   validate :abstract_length
   validates :title, length: { maximum: 60 }
@@ -27,7 +33,7 @@ class Proposal < ApplicationRecord
   validates_inclusion_of :state, in: FINAL_STATES, allow_nil: false, message: "'%{value}' not a confirmable state.",
                                  if: :confirmed_at_changed?
 
-  validates :research, :location_and_time_zone, :equipment_requirements, :accessibility_requirements, presence: true
+  validates :location_and_time_zone, :equipment_requirements, :accessibility_requirements, presence: true
   validates :video_voice_recording_permission, acceptance: true
 
   serialize :last_change

@@ -174,7 +174,7 @@ If your talk is about seed data in Rails apps, we want to hear about it!
     p.abstract = Faker::Hipster.sentence
     p.details = Faker::Hacker.say_something_smart
     p.pitch = Faker::Superhero.power
-    p.research = Faker::Lorem.sentence
+    p.talk_type = Proposal::TALK_TYPES.sample
     p.location_and_time_zone = Time.zone_default
     p.equipment_requirements = Faker::Lorem.sentence
     p.accessibility_requirements = Faker::Lorem.sentence
@@ -191,7 +191,7 @@ If your talk is about seed data in Rails apps, we want to hear about it!
     p.abstract = Faker::Hipster.sentence
     p.details = Faker::Hacker.say_something_smart
     p.pitch = Faker::Superhero.power
-    p.research = Faker::Lorem.sentence
+    p.talk_type = Proposal::TALK_TYPES.sample
     p.location_and_time_zone = Time.zone_default
     p.equipment_requirements = Faker::Lorem.sentence
     p.accessibility_requirements = Faker::Lorem.sentence
@@ -209,7 +209,7 @@ If your talk is about seed data in Rails apps, we want to hear about it!
     p.abstract = Faker::Hipster.sentence
     p.details = Faker::Hacker.say_something_smart
     p.pitch = Faker::Superhero.power
-    p.research = Faker::Lorem.sentence
+    p.talk_type = Proposal::TALK_TYPES.sample
     p.location_and_time_zone = Time.zone_default
     p.equipment_requirements = Faker::Lorem.sentence
     p.accessibility_requirements = Faker::Lorem.sentence
@@ -227,7 +227,7 @@ If your talk is about seed data in Rails apps, we want to hear about it!
     p.abstract = Faker::Hipster.sentence
     p.details = Faker::Hacker.say_something_smart
     p.pitch = Faker::Superhero.power
-    p.research = Faker::Lorem.sentence
+    p.talk_type = Proposal::TALK_TYPES.sample
     p.location_and_time_zone = Time.zone_default
     p.equipment_requirements = Faker::Lorem.sentence
     p.accessibility_requirements = Faker::Lorem.sentence
@@ -245,7 +245,7 @@ If your talk is about seed data in Rails apps, we want to hear about it!
     p.abstract = Faker::Hipster.sentence
     p.details = Faker::Hacker.say_something_smart
     p.pitch = Faker::Superhero.power
-    p.research = Faker::Lorem.sentence
+    p.talk_type = Proposal::TALK_TYPES.sample
     p.location_and_time_zone = Time.zone_default
     p.equipment_requirements = Faker::Lorem.sentence
     p.accessibility_requirements = Faker::Lorem.sentence
@@ -263,7 +263,7 @@ If your talk is about seed data in Rails apps, we want to hear about it!
     p.abstract = Faker::Hipster.sentence
     p.details = Faker::Hacker.say_something_smart
     p.pitch = Faker::Superhero.power
-    p.research = Faker::Lorem.sentence
+    p.talk_type = Proposal::TALK_TYPES.sample
     p.location_and_time_zone = Time.zone_default
     p.equipment_requirements = Faker::Lorem.sentence
     p.accessibility_requirements = Faker::Lorem.sentence
@@ -349,7 +349,7 @@ If your talk is about seed data in Rails apps, we want to hear about it!
     p.abstract = Faker::Hipster.sentence
     p.details = Faker::Hacker.say_something_smart
     p.pitch = Faker::Superhero.power
-    p.research = Faker::Lorem.sentence
+    p.talk_type = Proposal::TALK_TYPES.sample
     p.location_and_time_zone = Time.zone_default
     p.equipment_requirements = Faker::Lorem.sentence
     p.accessibility_requirements = Faker::Lorem.sentence
@@ -368,7 +368,7 @@ If your talk is about seed data in Rails apps, we want to hear about it!
     p.abstract = Faker::Hipster.sentence
     p.details = Faker::Hacker.say_something_smart
     p.pitch = Faker::Superhero.power
-    p.research = Faker::Lorem.sentence
+    p.talk_type = Proposal::TALK_TYPES.sample
     p.location_and_time_zone = Time.zone_default
     p.equipment_requirements = Faker::Lorem.sentence
     p.accessibility_requirements = Faker::Lorem.sentence
@@ -543,7 +543,7 @@ If you are on the cutting edge with savvy scheduling skills, we want you!
         abstract: Faker::Hipster.sentence,
         details: Faker::Hacker.say_something_smart,
         pitch: Faker::Superhero.power,
-        research: Faker::Lorem.sentence,
+        talk_type: Proposal::TALK_TYPES.sample,
         location_and_time_zone: Time.zone_default,
         equipment_requirements: Faker::Lorem.sentence,
         accessibility_requirements: Faker::Lorem.sentence,

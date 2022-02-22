@@ -6,7 +6,6 @@ FactoryBot.define do
     details { "Various other things" }
     pitch { "Baseball." }
     session_format { SessionFormat.first || FactoryBot.create(:session_format) }
-    research { "Science" }
     location_and_time_zone { "Central Time (US & Canada)" }
     equipment_requirements { "Video camera" }
     accessibility_requirements { "None" }
