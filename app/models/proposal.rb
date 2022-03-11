@@ -27,7 +27,6 @@ class Proposal < ApplicationRecord
   ].freeze
 
   validates :title, :abstract, :session_format, presence: true
-  validate :abstract_length
   validates :title, length: { maximum: 60 }
   validates_inclusion_of :state, in: valid_states, allow_nil: true, message: "'%{value}' not a valid state."
   validates_inclusion_of :state, in: FINAL_STATES, allow_nil: false, message: "'%{value}' not a confirmable state.",
@@ -264,12 +263,6 @@ class Proposal < ApplicationRecord
   end
 
   private
-
-  def abstract_length
-    return unless abstract_changed? && abstract.gsub(/\r/, '').gsub(/\n/, '').length > 600
-
-    errors.add(:abstract, 'is too long (maximum is 600 characters)')
-  end
 
   def save_tags
     update_tags(proposal_taggings, @tags, false) if @tags
