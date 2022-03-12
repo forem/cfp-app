@@ -57,9 +57,9 @@ describe Proposal do
       expect{proposal.save}.to change{proposal.uuid}.from(nil).to('greendalec')
     end
 
-    it "limits abstracts to 600 characters or less" do
+    it "does not limit abstracts to 600 characters or less" do #This is a change from upstream rubycentral!
       expect(build(:proposal, abstract: "S" * 600)).to be_valid
-      expect(build(:proposal, abstract: "S" * 601)).not_to be_valid
+      expect(build(:proposal, abstract: "S" * 601)).to be_valid
     end
   end
 
