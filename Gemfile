@@ -38,6 +38,7 @@ gem 'country_select', '~> 1.3'
 gem 'draper', '~> 4.0'
 gem 'faker'
 gem 'groupdate'
+gem "honeybadger", "~> 4.0"
 gem 'nokogiri'
 gem 'pundit'
 gem 'redcarpet', '~> 3.5'
