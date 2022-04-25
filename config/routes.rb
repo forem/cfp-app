@@ -4,6 +4,12 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   mount ActionCable.server => '/cable'
 
+  authenticate :user, ->(user) { user.admin? } do
+    require "sidekiq/web"
+
+    mount Sidekiq::Web => "sidekiq"
+  end
+
   get '/profile' => 'profiles#edit', as: :edit_profile
   patch '/profile' => 'profiles#update'
   get '/my-proposals' => 'proposals#index', as: :proposals
